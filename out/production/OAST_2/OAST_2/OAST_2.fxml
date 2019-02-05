@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OAST_2.Controller">
+  <panes>
+    <TitledPane animated="true" text="Wczytaj plik">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="button_load" mnemonicParsing="false" onAction="#onLoad" text="Wczytaj plik" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="30.0" />
+                  <Text fx:id="text_load" strokeType="OUTSIDE" strokeWidth="0.0" text="Plik nie wczytany" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="true" text="Brutalna siła">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text fx:id="text_time_limit_brute" strokeType="OUTSIDE" strokeWidth="0.0" text="Limit czasowy w sekundach:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                   <Text fx:id="text_progress_brute" strokeType="OUTSIDE" strokeWidth="0.0" text="Algorytm nie jest włączony" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="100.0" />
+
+                   <Button fx:id="button_brute" mnemonicParsing="false" onAction="#onBrute" text="Odpal Brute Force!" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0" />
+                   <TextField fx:id="input_time_brute" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="10.0" />
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="true" text="Ewolucyjny">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+                <Text fx:id="text_time_limit_evo" strokeType="OUTSIDE" strokeWidth="0.0" text="Limit czasowy w minutach:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                <TextField fx:id="input_time_evo" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="10.0" />
+                <Text fx:id="text_gen_limit_evo" strokeType="OUTSIDE" strokeWidth="0.0" text="Limit generacji:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="50.0" />
+                <TextField fx:id="input_gen_evo" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="50.0" />
+                <Text fx:id="text_seed_evo" strokeType="OUTSIDE" strokeWidth="0.0" text="Seed:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="90.0" />
+                <TextField fx:id="input_seed_evo" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="90.0" />
+                <Text fx:id="text_first_gen_evo" strokeType="OUTSIDE" strokeWidth="0.0" text="Liczba osobników w populacji:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="130.0" />
+                <TextField fx:id="input_first_gen_evo" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="130.0" />
+                <Text fx:id="text_pair_evo" strokeType="OUTSIDE" strokeWidth="0.0" text="Liczba par:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="170.0" />
+                <TextField fx:id="input_pair_evo" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="170.0" />
+                <Text fx:id="text_child_evo" strokeType="OUTSIDE" strokeWidth="0.0" text="Liczba dzieci w każdej parze:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="210.0" />
+                <TextField fx:id="input_child_evo" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="210.0" />
+                <Text fx:id="text_mutation_evo" strokeType="OUTSIDE" strokeWidth="0.0" text="Szansa na mutacje:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="250.0" />
+                <TextField fx:id="input_mutation_evo" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="250.0" />
+
+                <Text fx:id="text_progress_evo" strokeType="OUTSIDE" strokeWidth="0.0" text="Algorytm nie jest włączony" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="330.0" />
+
+                <Button fx:id="button_evo" mnemonicParsing="false" onAction="#onEvo" text="Odpal algorytm ewolucyjny!" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="290.0" />
+            </children></AnchorPane>
+      </content>
+    </TitledPane>
+  </panes>
+</Accordion>

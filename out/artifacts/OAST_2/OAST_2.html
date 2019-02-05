@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <SCRIPT src="https://java.com/js/dtjava.js"></SCRIPT><script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'OAST_2.jnlp'
+            },
+            {
+                javafx : '9.0.4+'
+            },
+            {}
+        );
+        return false;
+    }
+</script><script>
+    function javafxEmbedOAST_2() {
+        dtjava.embed(
+            {
+                id : 'OAST_2',
+                url : 'OAST_2.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '600',
+                height : '400'
+            },
+            {
+                javafx : '9.0.4+'
+            },
+            {}
+        );
+    }
+    
+            <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedOAST_2);
+</script>
+    </head>
+    <body>
+        <h2>
+            Test page for <b>Main</b>
+        </h2>
+        <b>Webstart:</b><a href="OAST_2.jnlp" onclick="return launchApplication('OAST_2.jnlp');">click to launch this app as webstart</a>
+        <br>
+        <hr>
+        <br>
+        
+        <!-- Applet will be inserted here -->
+        <div id="javafx-app-placeholder"></div>
+    </body>
+</html>
